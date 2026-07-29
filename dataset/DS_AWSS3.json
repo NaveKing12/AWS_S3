@@ -1,0 +1,34 @@
+{
+	"name": "DS_AWSS3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AWSS3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AmazonS3Location",
+				"bucketName": "naveens3storage1",
+				"folderPath": "metadata",
+				"fileName": "s3metadata.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "sourcecontainer",
+				"type": "String"
+			},
+			{
+				"name": "sinkcontainer",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

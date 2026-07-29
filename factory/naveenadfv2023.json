@@ -1,0 +1,15 @@
+{
+	"name": "naveenadfv2023",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "191fc779-10cb-4176-8b43-f4d1acb544c4",
+		"tenantId": "8e90e43e-d59c-432b-b0b5-80314490943d"
+	}
+}

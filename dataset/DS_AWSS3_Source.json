@@ -1,0 +1,73 @@
+{
+	"name": "DS_AWSS3_Source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AWSS3",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"ds_para_sorucefn": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AmazonS3Location",
+				"bucketName": "naveens3storage1",
+				"folderPath": {
+					"value": "@dataset().ds_para_sorucefn",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Index",
+				"type": "String"
+			},
+			{
+				"name": "Organization Id",
+				"type": "String"
+			},
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "Website",
+				"type": "String"
+			},
+			{
+				"name": "Country",
+				"type": "String"
+			},
+			{
+				"name": "Description",
+				"type": "String"
+			},
+			{
+				"name": "Founded",
+				"type": "String"
+			},
+			{
+				"name": "Industry",
+				"type": "String"
+			},
+			{
+				"name": "Number of employees",
+				"type": "String"
+			},
+			{
+				"name": "UpdatedAt",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
